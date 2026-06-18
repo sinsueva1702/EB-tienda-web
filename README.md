@@ -1,46 +1,46 @@
-# Easybyte Informática // Cybernetic Hardware Lab
+# Easybyte Informática // Catálogo Web de Hardware
 
-A modern, highly responsive, and exciting e-commerce experience built for **Easybyte Informática**—a premium custom hardware and computer systems shop. This application features a fully searchable, filterable product matrix and polished detail pages complete with deep specification tables, custom variant configurations, image galleries, and a persistent checkout cart system.
+Una plataforma de comercio electrónico moderna, rápida y optimizada, desarrollada para **Easybyte Informática**, tienda premium de computadoras y componentes de hardware a medida. Esta aplicación cuenta con un catálogo de productos con filtros avanzados, páginas de detalles con especificaciones técnicas completas, configurador de componentes personalizados, galería de imágenes y un carrito de compras interactivo.
 
 ---
 
-## 🛠️ Tech Stack & Architecture
+## 🛠️ Tecnologías Utilizadas y Arquitectura
 
 - **Framework**: [TanStack Start](https://tanstack.com/router/v1/docs/start/overview) (React 19, Vite 7)
-- **Database**: [Netlify Database](https://docs.netlify.com/databases/netlify-database/) (Managed Serverless Postgres)
-- **ORM**: [Drizzle ORM](https://orm.drizzle.team) (Type-safe schemas and automatic migration workflows)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com) (Industrial cyberpunk dark aesthetic, interactive animations, and responsive layouts)
-- **Icons**: [Lucide React](https://lucide.dev)
+- **Base de Datos**: [Netlify Database](https://docs.netlify.com/databases/netlify-database/) (Postgres Serverless gestionado)
+- **ORM**: [Drizzle ORM](https://orm.drizzle.team) (Esquemas con tipado seguro y flujos de migración automáticos)
+- **Estilos**: [Tailwind CSS v4](https://tailwindcss.com) (Diseño oscuro moderno, animaciones interactivas y diseño 100% responsivo para celulares y PC)
+- **Íconos**: [Lucide React](https://lucide.dev)
 
 ---
 
-## 🚀 Key Features
+## 🚀 Características Principales
 
-1. **Persistent Quantum Cargo Bay (Cart)**:
-   - Synchronized locally in `localStorage`.
-   - Allows users to configure custom variants (e.g. GPU, RAM, Storage upgrades) and save them per-item.
-   - Interactive sliding drawer with live subtotal counters, quantity adjustments, and secure simulated checkout operations.
+1. **Carrito de Compras Persistente**:
+   - Guardado automático en el navegador mediante `localStorage`.
+   - Permite elegir configuraciones personalizadas (por ejemplo, mejorar la Tarjeta de Video, RAM o Almacenamiento) y guardarlas por cada artículo.
+   - Panel lateral desplegable con cálculo de subtotales en tiempo real, ajuste de cantidades y simulación segura de pago.
 
-2. **Core Catalog Operations Matrix (Product Grid)**:
-   - Dynamic server-side product loaders querying our real-time Postgres database.
-   - Live client-side console-styled search query field.
-   - Dynamic category filter badges (All Sectors, Custom Rigs, Laptops, Peripherals, Displays) with active responsive counts.
-   - Immersive sci-fi cards detailing main hardware components directly from the landing node.
+2. **Catálogo de Productos Dinámico**:
+   - Carga de productos desde el servidor consultando directamente la base de datos Postgres en tiempo real.
+   - Barra de búsqueda rápida en el cliente.
+   - Filtros por categorías (Todos, Equipos Armados, Notebooks, Periféricos, Monitores) con contadores actualizados.
+   - Tarjetas visuales que muestran las características principales del hardware directamente desde la página de inicio.
 
-3. **Polished Detail Terminals (Product Pages)**:
-   - Multi-image gallery with active thumbnail selector.
-   - Interactive variant spec options that compile user choices directly into the checkout payload.
-   - Complete technical specifications table parsed dynamically from database JSON column fields.
-   - Integrated "Buy Now" button powered by Netlify Server Functions connected to Stripe Checkout.
+3. **Páginas de Detalles del Producto**:
+   - Galería multimedia con selector de imágenes en miniatura.
+   - Opciones interactivas para elegir componentes que se añaden directamente al carrito.
+   - Tabla de especificaciones técnicas detalladas leídas dinámicamente desde campos JSON en la base de datos.
+   - Integración del botón "Comprar Ahora" a través de Netlify Server Functions conectado a Stripe Checkout.
 
 ---
 
-## 💻 Running the Laboratory Locally
+## 💻 Cómo Ejecutar el Proyecto Localmente
 
-### 1. Install Dependencies
+### 1. Instalar las Dependencias
+Ejecutá este comando en tu terminal para descargar todos los paquetes necesarios del proyecto:
 ```bash
 npm install
-```
 
 ### 2. Run Local Development Server
 Use the Netlify CLI to launch the local development environment, emulation for Netlify Database, and hot module reloading:
