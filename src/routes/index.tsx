@@ -65,27 +65,27 @@ function ProductsIndex() {
           
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border-active/40 bg-card-dark text-slate-300 text-xs font-mono tracking-wider uppercase mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-pulse" />
-            <span>Welcome to Easybyte Informática</span>
+            <span>Bienvenido a Easybyte Informática</span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-mono font-extrabold tracking-tight text-white uppercase mb-6 leading-tight">
-            PROFESSIONAL IT SERVICES <br className="sm:hidden" />
+            SERVICIO TÉCNICO <br className="sm:hidden" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-300 to-slate-500">
-              & PREMIUM HARDWARE
+              & HARDWARE
             </span>
           </h1>
 
           <p className="max-w-2xl mx-auto text-sm sm:text-base text-slate-400 leading-relaxed font-sans mb-8">
-            We are dedicated to building and maintaining high-performance digital spaces. From expert custom PC assembly and deep cleaning to official software activation and premium hardware components, we have you covered.
+            Nos dedicamos a crear y mantener espacios digitales de alto rendimiento. Desde el ensamblaje de PC a medida y la limpieza profunda hasta venta de software y componentes de hardware.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-mono uppercase tracking-wider">
             <span className="border border-border-active/40 bg-card-dark px-4 py-2 text-slate-400 rounded-lg">
-              Catalog Items: <span className="text-white font-bold">{loadedProducts.length}</span>
+              Artículos disponibles: <span className="text-white font-bold">{loadedProducts.length}</span>
             </span>
-            <span className="border border-border-active/40 bg-card-dark px-4 py-2 text-slate-400 rounded-lg">
-              Support Status: <span className="text-white font-bold">Online & Active</span>
-            </span>
+            {/*<span className="border border-border-active/40 bg-card-dark px-4 py-2 text-slate-400 rounded-lg">
+              Estado de soporte: <span className="text-white font-bold">Online</span>
+            </span>*/}
           </div>
         </div>
       </section>
@@ -103,7 +103,7 @@ function ProductsIndex() {
               </div>
               <input
                 type="text"
-                placeholder="Search hardware or services..."
+                placeholder="Buscar hardware o servicios..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-bg-deep border border-border-active/40 focus:border-text-white text-slate-100 rounded-xl font-sans text-sm placeholder-slate-600 focus:outline-none focus:ring-1 focus:ring-text-white/25 transition-all"
@@ -122,7 +122,7 @@ function ProductsIndex() {
             <div className="flex flex-wrap items-center gap-2">
               <div className="flex items-center gap-2 text-slate-500 text-xs font-mono mr-2 uppercase">
                 <SlidersHorizontal className="w-3.5 h-3.5 text-text-gray" />
-                <span>Category:</span>
+                <span>Categoría:</span>
               </div>
               {categories.map((cat) => (
                 <button
@@ -150,10 +150,10 @@ function ProductsIndex() {
           <div className="border border-border-active/15 bg-card-dark/40 p-16 rounded-2xl text-center flex flex-col items-center justify-center">
             <Cpu className="w-12 h-12 text-slate-600 mb-4 animate-pulse" />
             <h3 className="text-xl font-mono uppercase tracking-wider font-bold mb-2">
-              No matching items
+              No hay coincidentes
             </h3>
             <p className="text-sm text-slate-400 max-w-md">
-              We couldn't find any hardware or services matching your query "{searchQuery}". Try clearing filters or searching for something else.
+              No pudimos encontrar ningún hardware o servicio que coincida con su consulta "{searchQuery}". Intente borrar los filtros o buscar otra cosa.
             </p>
             <button
               onClick={() => {
@@ -162,7 +162,7 @@ function ProductsIndex() {
               }}
               className="mt-6 font-mono text-xs uppercase bg-text-white hover:bg-slate-200 text-bg-deep px-5 py-2.5 rounded-lg font-bold transition-all cursor-pointer"
             >
-              Reset Filters
+              Restablecer filtros
             </button>
           </div>
         ) : (
@@ -193,9 +193,9 @@ function ProductsIndex() {
                   {/* Stock level indicators */}
                   <div className="absolute top-4 right-4 z-10 font-mono text-[9px] uppercase tracking-widest bg-black/80 border border-border-active/30 text-slate-400 px-2.5 py-1 rounded-md backdrop-blur-md">
                     {product.category === 'Services' ? (
-                      <span className="text-slate-300 font-bold">Service Available</span>
+                      <span className="text-slate-300 font-bold">Servicio disponible</span>
                     ) : (
-                      <span>Stock: <span className={product.stock <= 5 ? 'text-rose-450 font-bold' : 'text-slate-300 font-bold'}>{product.stock} units</span></span>
+                      <span>Stock: <span className={product.stock <= 5 ? 'text-rose-450 font-bold' : 'text-slate-300 font-bold'}>{product.stock} unidades</span></span>
                     )}
                   </div>
 
@@ -310,23 +310,23 @@ function ProductsIndex() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-text-gray mb-4 bg-[#14171a] border border-border-active/40 px-3 py-1 rounded">
-                Our Services // Care & Support
+                Nuestros servicios // Atención y soporte
               </div>
               <h2 className="text-2xl sm:text-3xl font-mono uppercase font-bold text-white mb-6">
-                PROFESSIONAL TECH SERVICES PERFORMED WITH CARE
+                SERVICIOS TÉCNICOS PROFESIONALES REALIZADOS CON ESMERO
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-sans mb-6">
-                Easybyte Informática is more than just a store. We are your dedicated IT partner. Every custom computer build, deep cleaning maintenance, and system activation is handled by certified technicians using professional diagnostics to ensure total reliability.
+                Easybyte Informática es más que una tienda. Somos su socio informático de confianza. Cada ensamblaje de computadora a medida, limpieza profunda, mantenimiento y activación de sistema es realizado por técnicos certificados que utilizan diagnósticos profesionales para garantizar una fiabilidad total.
               </p>
               
               <div className="grid grid-cols-2 gap-4 font-mono text-[10px] text-slate-400 uppercase tracking-wider">
                 <div className="p-3 border border-border-active/30 bg-bg-deep rounded-lg">
-                  <span className="block text-white font-bold text-xs mb-1">Expert Diagnosis</span>
-                  Detailed Component Testing
+                  <span className="block text-white font-bold text-xs mb-1">Diagnosis</span>
+                  Testing completo de componentes
                 </div>
                 <div className="p-3 border border-border-active/30 bg-bg-deep rounded-lg">
-                  <span className="block text-white font-bold text-xs mb-1">Fast Turnaround</span>
-                  Most Services Done in 24h
+                  <span className="block text-white font-bold text-xs mb-1">Entrega rápida</span>
+                  La mayoría de los servicios se realizan en 24-48 horas
                 </div>
               </div>
             </div>
@@ -347,19 +347,19 @@ function ProductsIndex() {
       <section id="why-choose-us" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-center text-xs uppercase tracking-wider">
           <div className="border border-border-active/20 bg-card-dark/60 rounded-2xl p-6 relative">
-            <span className="block text-slate-300 font-extrabold text-lg mb-2">01 // PREMIUM HARDWARE</span>
-            <span className="block text-white text-xs font-bold mb-1">CURATED COMPONENTS</span>
-            <p className="text-[10px] text-slate-450 normal-case tracking-normal">All hardware modules are selected from premium lines with proven durability and lifetime support.</p>
+            <span className="block text-slate-300 font-extrabold text-lg mb-2">01 // HARDWARE</span>
+            <span className="block text-white text-xs font-bold mb-1">DE CALIDAD SELECCIONADOS</span>
+            <p className="text-[10px] text-slate-450 normal-case tracking-normal">Todos los módulos de hardware se seleccionan con durabilidad en mente.</p>
           </div>
           <div className="border border-border-active/20 bg-card-dark/60 rounded-2xl p-6 relative">
-            <span className="block text-slate-300 font-extrabold text-lg mb-2">02 // CERTIFIED HELP</span>
-            <span className="block text-white text-xs font-bold mb-1">1-ON-1 GUIDANCE</span>
-            <p className="text-[10px] text-slate-450 normal-case tracking-normal">Get expert custom-fit hardware consultation so you never spend a cent on specs you do not require.</p>
+            <span className="block text-slate-300 font-extrabold text-lg mb-2">02 // ATENCIÓN CERTIFICADA</span>
+            <span className="block text-white text-xs font-bold mb-1">Y ASESORAMIENTO PERSONALIZADO</span>
+            <p className="text-[10px] text-slate-450 normal-case tracking-normal">Obtén asesoramiento experto sobre hardware a medida para que nunca gastes de más en lo que no necesitas.</p>
           </div>
           <div className="border border-border-active/20 bg-card-dark/60 rounded-2xl p-6 relative">
-            <span className="block text-slate-300 font-extrabold text-lg mb-2">03 // PROFESSIONAL ASSURANCE</span>
-            <span className="block text-white text-xs font-bold mb-1">WARRANTY PROTECTION</span>
-            <p className="text-[10px] text-slate-450 normal-case tracking-normal">Every assembly service and hardware sale comes backed with standard product warranty coverage.</p>
+            <span className="block text-slate-300 font-extrabold text-lg mb-2">03 // PROTECCIÓN</span>
+            <span className="block text-white text-xs font-bold mb-1">DE GARANTÍA</span>
+            <p className="text-[10px] text-slate-450 normal-case tracking-normal">Cada servicio de montaje y venta de hardware viene respaldado por una cobertura de garantía estándar propio del producto.</p>
           </div>
         </div>
       </section>
