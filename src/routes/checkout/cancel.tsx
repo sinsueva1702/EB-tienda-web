@@ -15,23 +15,22 @@ function CheckoutCancel() {
         </div>
         
         <h1 className="text-3xl font-mono uppercase font-bold text-white mb-4">
-          Checkout Cancelled
+          Pango cancelado
         </h1>
         
         <p className="text-slate-400 text-sm leading-relaxed mb-8 font-sans">
-          The transaction has been cancelled. No charges were made. The items remain saved in your shopping cart, and you can complete your order whenever you are ready.
+          La transacción fue cancelada y no se realizó ningún cargo. Tus productos siguen guardados en el carrito para que puedas completar tu pedido cuando estés listo.
         </p>
-
         <Link
           to="/"
           className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider bg-transparent border border-border-active hover:border-white text-slate-300 hover:text-white px-6 py-3 rounded-lg font-bold transition-all cursor-pointer group"
         >
-          <span>Return to Catalog</span>
+          <span>Volver al catálogo</span>
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </Link>
         
         <div className="mt-8 text-[9px] font-mono text-slate-500 uppercase tracking-wider">
-          ORDER STATUS: TRANSACTION_CANCELLED
+          ESTADO DEL PEDIDO: TRANSACCIÓN CANCELADA
         </div>
       </div>
     </div>
