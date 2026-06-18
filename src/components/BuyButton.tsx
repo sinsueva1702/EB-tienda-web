@@ -33,9 +33,9 @@ export function BuyButton({
       <button
         disabled
         className={`px-6 py-2 rounded-lg border ${className}`}
-        title="Checkout is not available"
+        title="Pago no está disponible"
       >
-        Checkout Unavailable
+        Pago no disponible
       </button>
     )
   }
@@ -46,7 +46,7 @@ export function BuyButton({
       disabled={loading || stripeEnabled === null}
       className={`px-6 py-2 rounded-lg border disabled:cursor-wait ${className}`}
     >
-      {loading ? 'Processing...' : 'Buy Now'}
+      {loading ? 'Procesando...' : 'Comprar ahora'}
     </button>
   )
 }
