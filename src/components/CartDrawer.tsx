@@ -67,7 +67,7 @@ export function CartDrawer() {
               <div className="flex items-center gap-3">
                 <ShoppingBag className="w-5 h-5 text-slate-300" />
                 <h2 className="text-xl font-mono uppercase tracking-wider font-semibold text-white">
-                  Your Cart <span className="text-xs text-slate-400 font-normal">[{cartCount} {cartCount === 1 ? 'item' : 'items'}]</span>
+                  Tu Carrito <span className="text-xs text-slate-400 font-normal">[{cartCount} {cartCount === 1 ? 'artículo' : 'artículos'}]</span>
                 </h2>
               </div>
               <button
@@ -79,6 +79,7 @@ export function CartDrawer() {
             </div>
 
             {/* Content / Items List */}
+            {/* Content / Items List */}
             <div className="flex-1 overflow-y-auto py-4 px-6">
               {success ? (
                 <div className="h-full flex flex-col items-center justify-center text-center p-6">
@@ -86,29 +87,29 @@ export function CartDrawer() {
                     <ShieldCheck className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-mono uppercase tracking-wider font-bold mb-2 text-white">
-                    Order Placed Successfully
+                    Pedido Realizado con Éxito
                   </h3>
                   <p className="text-sm text-slate-400 max-w-xs font-sans">
-                    Thank you for your purchase! Your request has been securely processed. We are preparing your hardware components or scheduling your technical service.
+                    ¡Gracias por tu compra! Tu solicitud fue procesada de forma segura. Ya estamos preparando tus componentes o agendando tu servicio técnico.
                   </p>
                   <div className="mt-8 text-xs font-mono text-slate-300 uppercase tracking-widest bg-[#1a1d21] px-3 py-1 border border-border-active/40">
-                    ORDER PROCESSED
+                    PEDIDO PROCESADO
                   </div>
                 </div>
               ) : cart.length === 0 ? (
                 <div className="h-full flex flex-col items-center justify-center text-center p-6">
                   <ShoppingBag className="w-12 h-12 text-slate-600 mb-4 stroke-[1.5]" />
                   <h3 className="text-lg font-mono uppercase tracking-wider font-semibold text-slate-300">
-                    Your Cart is Empty
+                    Tu carrito está vacío
                   </h3>
                   <p className="text-xs text-slate-500 mt-2 max-w-xs font-sans">
-                    Browse our catalog of premium hardware components and professional IT services to fill your cart.
+                    Explorá nuestro catálogo de componentes y servicios para llenar tu carrito.
                   </p>
                   <button
                     onClick={() => setIsCartOpen(false)}
                     className="mt-6 font-mono text-xs uppercase tracking-wider text-white hover:text-slate-300 flex items-center gap-1 group cursor-pointer"
                   >
-                    Browse Catalog <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                    Ver Catálogo <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
               ) : (
@@ -162,7 +163,7 @@ export function CartDrawer() {
                             <button
                               onClick={() => removeFromCart(item.id, item.selectedVariant)}
                               className="text-slate-500 hover:text-rose-450 transition-colors cursor-pointer"
-                              title="Remove item"
+                              title="Eliminar producto"
                             >
                               <Trash2 className="w-4 h-4" />
                             </button>
@@ -185,9 +186,9 @@ export function CartDrawer() {
                   </span>
                 </div>
                 <div className="flex justify-between text-[11px] font-mono text-slate-500">
-                  <span>SECURE CHECKOUT</span>
+                  <span>PAGO SEGURO</span>
                   <span className="text-slate-300 flex items-center gap-1 uppercase tracking-wider">
-                    <ShieldCheck className="w-3.5 h-3.5 text-slate-400" /> SSL SECURE 256-BIT
+                    <ShieldCheck className="w-3.5 h-3.5 text-slate-400" /> SSL SEGURO DE 256 BITS
                   </span>
                 </div>
 
@@ -199,11 +200,11 @@ export function CartDrawer() {
                   {loading ? (
                     <span className="flex items-center gap-2">
                       <span className="animate-spin rounded-full h-4 w-4 border-2 border-bg-deep border-t-transparent" />
-                      PROCESSING ORDER...
+                      PROCESANDO PEDIDO...
                     </span>
                   ) : (
                     <>
-                      PROCEED TO SECURE CHECKOUT
+                      PROCEDER AL PAGO SEGURO
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-bg-deep" />
                     </>
                   )}
@@ -213,7 +214,7 @@ export function CartDrawer() {
                   onClick={() => setIsCartOpen(false)}
                   className="w-full py-2 bg-transparent hover:bg-card-dark text-slate-400 font-mono text-xs uppercase tracking-wider border border-border-active/30 hover:border-border-active rounded-lg transition-colors cursor-pointer"
                 >
-                  Close Cart
+                  Cerrar Carrito
                 </button>
               </div>
             )}
